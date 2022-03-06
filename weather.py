@@ -6,6 +6,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 TOKEN = os.getenv('TOKEN')
+key = os.getenv('KEY')
 
 client = discord.Client()
 
@@ -19,7 +20,7 @@ async def on_message(message):
             city = message.content[9:len(message.content)-2]
         else:
             city = message.content[9:len(message.content)]
-        r = requests.get(f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid=36762f965780d58d8eb0a526529d2b4c")
+        r = requests.get(f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={key}")
         data = r.json()
         temp_k = data['main']['temp']
         temp_c = temp_k - 273.15
