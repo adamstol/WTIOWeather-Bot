@@ -19,7 +19,7 @@ async def Weather(message, *arguments):
     type_temp = ''
     for i in range (len(arguments)):
         if arguments[i].lower() == 'f' or arguments[i].lower() == 'c':
-            type_temp = arguments[i]
+            type_temp = arguments[i].lower()
         else:
             city += arguments[i] + ' '
     city = city.strip()
