@@ -1,9 +1,11 @@
-# WTIOWeather-Bot
+# ☁️ WTIOWeather-Bot ☁️
 
-Discord Weather Bot that takes a city name and outputs the current live temperature in Celsius or in Fahrenheit using OpenWeatherMap API
+Discord Weather Bot that takes a location and outputs the current live temperature in Celsius or in Fahrenheit using OpenWeatherMap API
 
-If you'd like to test out the bot you can join my bot testing discord server (Note: the bot will likely be down since I'm hosting it on my computer so let me know if you'd like to test it) https://discord.gg/bQxnykzkDM
+Discord Weather Bot is live 24/7 
 
 Commands:
 
--Weather {City Name} <-- Optional: {C or F (Defaulted to C)}
+-Weather {Location} <-- Optional: {C or F (Defaulted to C)}
+
+Locations can be Cities, Provinces, States, or Countries
