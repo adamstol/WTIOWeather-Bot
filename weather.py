@@ -18,7 +18,7 @@ async def Weather(message, *arguments):
     city = ''
     type_temp = ''
     for i in range (len(arguments)):
-        if arguments[i].lower() == 'f' or arguments[i].lower() == 'c':
+        if arguments[i].lower() == 'f' or arguments[i].lower() == 'c' or arguments[i].lower() == 'k':
             type_temp = arguments[i].lower()
         else:
             city += arguments[i] + ' '
@@ -29,13 +29,12 @@ async def Weather(message, *arguments):
         r = requests.get(f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={key}")
         data = r.json()
         temp_k = data['main']['temp']
-        temp_c = temp_k - 273.15
         if type_temp == 'f':
-            temp_f = 1.8 * (temp_k - 273) + 32
-            await message.channel.send(f"It is {round(temp_f, 2)}° Fahrenheit in {city}")
+            await message.channel.send(f"It is {round(1.8 * (temp_k - 273) + 32, 2)}° Fahrenheit in {city}")
+        elif type_temp == 'k':
+            await message.channel.send(f"It is {round(temp_k, 2)} Kelvin in {city}")
         else:
-            await message.channel.send(f"It is {round(temp_c, 2)}° Celsius in {city}")
-
+            await message.channel.send(f"It is {round(temp_k - 273.15, 2)}° Celsius in {city}")
 
 @bot.event
 async def on_ready():
