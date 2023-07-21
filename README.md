@@ -1,10 +1,10 @@
 # ☁️ WTIOWeather-Bot ☁️
 
-🌡️ WTIOWeather Bot is a discord bot that receives a location through message input and outputs the current live temperature in Celsius or in Fahrenheit using OpenWeatherMap API 🌡️
+🌡️ WTIOWeather Bot is a discord bot that receives a location through message input and outputs the current live temperature in Celsius, Fahrenheit, or Kelvin using OpenWeatherMap API 🌡️
 
 ⚙️ Commands ⚙️:
 
--Weather {Location} <-- Optional: {C or F (Defaulted to C)}
+-Weather {Location} <-- Optional: {C, F, or K (Defaulted to C)}
 
 Locations can be Cities, Provinces, States, or Countries
 
